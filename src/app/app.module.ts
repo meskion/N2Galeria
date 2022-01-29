@@ -45,8 +45,11 @@ import { IndexDropdownComponent } from "./components/dropdowns/index-dropdown/in
 import { TableDropdownComponent } from "./components/dropdowns/table-dropdown/table-dropdown.component";
 import { PagesDropdownComponent } from "./components/dropdowns/pages-dropdown/pages-dropdown.component";
 import { NotificationDropdownComponent } from "./components/dropdowns/notification-dropdown/notification-dropdown.component";
-import { SidebarComponent } from "./components/sidebar/sidebar.component";
+import { SidebarComponent } from "./views/noticias/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
+import { NoticiasComponent } from './views/noticias/noticias.component';
+import { ExposicionesComponent } from './views/exposiciones/exposiciones.component';
+import { ZoomImgComponent } from './components/zoom-img/zoom-img.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +87,9 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
     IndexComponent,
     LandingComponent,
     ProfileComponent,
+    NoticiasComponent,
+    ExposicionesComponent,
+    ZoomImgComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

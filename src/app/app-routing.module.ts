@@ -17,7 +17,7 @@ import { RegisterComponent } from "./views/auth/register/register.component";
 
 // no layouts views
 import { IndexComponent } from "./views/index/index.component";
-import { LandingComponent } from "./views/landing/landing.component";
+import { NoticiasComponent } from "./views/noticias/noticias.component";
 import { ProfileComponent } from "./views/profile/profile.component";
 
 const routes: Routes = [
@@ -45,7 +45,7 @@ const routes: Routes = [
   },
   // no layout views
   { path: "profile", component: ProfileComponent },
-  { path: "landing", component: LandingComponent },
+  { path: "noticias", component: NoticiasComponent },
   { path: "", component: IndexComponent },
   { path: "**", redirectTo: "", pathMatch: "full" },
 ];
