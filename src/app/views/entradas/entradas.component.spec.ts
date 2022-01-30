@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ZoomImgComponent } from './zoom-img.component';
+import { EntradasComponent } from './entradas.component';
 
-describe('ZoomImgComponent', () => {
-  let component: ZoomImgComponent;
-  let fixture: ComponentFixture<ZoomImgComponent>;
+describe('EntradasComponent', () => {
+  let component: EntradasComponent;
+  let fixture: ComponentFixture<EntradasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ZoomImgComponent ]
+      declarations: [ EntradasComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ZoomImgComponent);
+    fixture = TestBed.createComponent(EntradasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

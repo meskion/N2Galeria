@@ -49,7 +49,10 @@ import { SidebarComponent } from "./views/noticias/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { NoticiasComponent } from './views/noticias/noticias.component';
 import { ExposicionesComponent } from './views/exposiciones/exposiciones.component';
-import { ZoomImgComponent } from './components/zoom-img/zoom-img.component';
+import { EntradasComponent } from './views/entradas/entradas.component';
+import { ExpoComponent } from './views/exposiciones/expo/expo.component';
+import { RouterModule } from "@angular/router";
+
 
 @NgModule({
   declarations: [
@@ -89,10 +92,18 @@ import { ZoomImgComponent } from './components/zoom-img/zoom-img.component';
     ProfileComponent,
     NoticiasComponent,
     ExposicionesComponent,
-    ZoomImgComponent,
+    EntradasComponent,
+    ExpoComponent,
+
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot([
+    { path: "expos", component: ExposicionesComponent },
+    { path: "expos/:id", component: ExpoComponent },
+    { path: "entradas", component: EntradasComponent },
+    { path: "noticias", component: NoticiasComponent },
+    { path: "", component: IndexComponent },
+    { path: "**", redirectTo: "", pathMatch: "full" }])],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

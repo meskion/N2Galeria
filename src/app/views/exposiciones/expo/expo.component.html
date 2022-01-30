@@ -1,3 +1,4 @@
+
 <app-index-navbar></app-index-navbar>
 <div class="relative  bg-blueGray-100 ">
     <div class="header relative  items-center flex   ">
@@ -5,7 +6,7 @@
     <div class="topspace"></div>
     <div class="justify-center text-center flex flex-wrap mt-24 pb-32">
         <div class="w-full md:w-6/12 px-12 md:px-4">
-          <h2 class="font-semibold text-4xl">Exposiciones</h2>
+          <h2 class="font-semibold text-4xl"> {{expo.title}}</h2>
          
         </div>
       </div>
@@ -17,16 +18,17 @@
                 <div class="w-full lg:w-12/12 px-4 -mt-24">
                     <div class="flex flex-wrap">
 
-                        <div class="w-full lg:w-4/12 px-4" *ngFor="let expo of expos; let i=index">
-                            <h5 class="text-xl font-semibold pb-4 text-center">{{expo.title}}</h5>
-                            <a [routerLink]="['/expos', expo.id]" >
+                        <div class="w-full lg:w-4/12 px-4" *ngFor="let img of expo.imgs; let i=index">
+                            
                                 <div
-                                    class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                                    class=" relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                                     <img alt="..." class="align-middle border-none max-w-full h-auto rounded-lg"
-                                        src="assets/img/Exposiciones/{{expo.imgs[0]}}" />
+                                        src="assets/img/Exposiciones/{{expo.imgs[i]}}" />
                                 </div>
-                            </a>
+                           
                         </div>
+
+                        <p  class="mb-4 text-blueGray-500 format">{{expo.content}}</p>
                     </div>
                 </div>
             </div>

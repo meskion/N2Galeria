@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import data from './exposiciones.json';
 @Component({
   selector: 'app-exposiciones',
   templateUrl: './exposiciones.component.html',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExposicionesComponent implements OnInit {
 
-  constructor() { }
+  public expos;
+  constructor() { 
+    this.expos = data;
+  }
 
   ngOnInit(): void {
   }

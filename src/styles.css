@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.topspace{
+    margin-top: 14rem;
+  
+}
+
+.format{
+   white-space: pre-line
+}
