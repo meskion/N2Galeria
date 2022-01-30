@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { AboutusComponent } from "./views/aboutus/aboutus.component";
 import { EntradasComponent } from "./views/entradas/entradas.component";
 import { ExpoComponent } from "./views/exposiciones/expo/expo.component";
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: "expos/:id", component: ExpoComponent},
   { path: "entradas", component: EntradasComponent },
   { path: "noticias", component: NoticiasComponent },
+  {path: "aboutus", component: AboutusComponent},
   { path: "", component: IndexComponent },
   { path: "**", redirectTo: "", pathMatch: "full" },
 ];

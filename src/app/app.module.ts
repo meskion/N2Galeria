@@ -52,6 +52,7 @@ import { ExposicionesComponent } from './views/exposiciones/exposiciones.compone
 import { EntradasComponent } from './views/entradas/entradas.component';
 import { ExpoComponent } from './views/exposiciones/expo/expo.component';
 import { RouterModule } from "@angular/router";
+import { AboutusComponent } from './views/aboutus/aboutus.component';
 
 
 @NgModule({
@@ -94,12 +95,14 @@ import { RouterModule } from "@angular/router";
     ExposicionesComponent,
     EntradasComponent,
     ExpoComponent,
+    AboutusComponent,
 
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot([
     { path: "expos", component: ExposicionesComponent },
     { path: "expos/:id", component: ExpoComponent },
     { path: "entradas", component: EntradasComponent },
+    { path: "", component: IndexComponent },
     { path: "noticias", component: NoticiasComponent },
     { path: "", component: IndexComponent },
     { path: "**", redirectTo: "", pathMatch: "full" }])],
